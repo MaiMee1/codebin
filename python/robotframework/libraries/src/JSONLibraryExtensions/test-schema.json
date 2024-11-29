@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "code": {"type": "integer", "format": "uint64"},
+        "message": {"type": "string"},
+        "details": {},
+        "data": {
+            "type": "object",
+            "properties": {
+                "trees": {"type": "array", "items": {"$ref": "test-schema-ref.json#/$defs/Tree"}},
+                "total": {"type": "integer", "minimum": 0}
+            },
+            "required": ["trees", "total"]
+        }
+    },
+    "required": ["code", "data"]
+}

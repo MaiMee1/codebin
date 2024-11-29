@@ -1,0 +1,21 @@
+{
+    "$defs": {
+        "Tree": {
+            "type": "object",
+            "properties": {
+                "name": {"type": "string", "minLength": 1},
+                "label": {"$ref": "../../../Resources/schemas/common-defs.json#/$defs/Labels"},
+                "description": {"type": "string"},
+                "result_field_name": {"type": "string"},
+                "created_at": {"type": "integer", "format": "int64", "exclusiveMinimum": 0},
+                "updated_at": {"type": "integer", "format": "int64", "exclusiveMinimum": 0},
+                "deleted_at": {"type": "integer", "format": "int64", "minimum": 0},
+                "type": {"enum": ["DECISION", "LOOPING"]},
+                "parent_tree": {"type": "string"},
+                "argument_field_list": {"type": ["array", "null"], "items": {"type": "string"}},
+                "field_set": {"type": "string"}
+            },
+            "required": ["name", "label", "description", "result_field_name", "created_at", "updated_at", "deleted_at", "type", "parent_tree", "argument_field_list", "field_set"]
+        }
+    }
+}

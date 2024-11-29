@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "jsonschema>=4.18"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robotframework-std-x"
+version = "0.0.1"
+authors = [
+  { name="Mai Mee", email="47658413+MaiMee1@users.noreply" },
+]
+description = "Extensions for the Robot Framework Standard Library"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
